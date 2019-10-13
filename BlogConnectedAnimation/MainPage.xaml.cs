@@ -18,8 +18,6 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace BlogConnectedAnimation
 {
     public sealed partial class MainPage : Page
@@ -69,7 +67,7 @@ namespace BlogConnectedAnimation
 
                 PersonThumbnail.ProfilePicture = new BitmapImage(new Uri(selectedItem.Photo));
 
-                ConnectedAnimation ConnectedAnimation = PersonsGridView.PrepareConnectedAnimation("forwardsAnimation", selectedItem, "connectedElement");
+                ConnectedAnimation ConnectedAnimation = PersonsGridView.PrepareConnectedAnimation("forwardAnimation", selectedItem, "connectedElement");
                 ConnectedAnimation.Configuration = new DirectConnectedAnimationConfiguration();
                 ConnectedAnimation.TryStart(destinationElement);
 
